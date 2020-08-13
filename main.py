@@ -6,6 +6,21 @@ if __name__ == '__main__':
     campo = CampoVetorial()
 
     print('Bem vindo ao simulador de campo vetorial!\n')
+    print('Primeiramente, defina o meio em que seu campo vetorial se situa.\n\
+    Digite alguma das próximas opções ou, caso deseje utilizar o vácuo, aperte ENTER\n')
+
+    medium = input('vacuo,\
+                    ar,\
+                    agua,\
+                    borracha,\
+                    enxofre,\
+                    quartzo,\
+                    vidro,\
+                    marmore,\
+                    etanol,\
+                    metanol,\
+                    glicerina')
+
     print('Você pode adicionar o número de cargas pontuais que desejar.\n')
     print('Comece com a sua primeira carga:\n')
 

@@ -8,7 +8,7 @@ class Vetor(object):
 class VetorPool:
     def __init__(self, vectors=set()):
         """
-            Insanciação de um objeto que armazenará todos os vetores calculados
+            Instanciação de um objeto que armazenará todos os vetores calculados
             Podem ser passados como um set na criação , ex: vect_pool = VetorPool({vect1, vect2})
             Pode ser passado instaciado e adicionado os vetores posteriormente, ex: vect_pool = VetorPool()
             vect_pool.add_vector(vetor)
@@ -66,3 +66,8 @@ class CampoVetorial:
     @classmethod
     def get_all_loads(cls):
         return cls.__camps
+
+    @staticmethod
+    def calculate_in_point(loads):
+        # vetor = CampoVetorial.calculate_in_point(x)
+        pass
