@@ -68,6 +68,11 @@ class CampoVetorial:
         return cls.__camps
 
     @staticmethod
-    def calculate_in_point(loads):
+    def calculate_in_point(vetor):
         # vetor = CampoVetorial.calculate_in_point(x)
-        pass
+        for x in CampoVetorial.get_all_loads:
+            xi, yi = position
+            distance = math.sqrt((vetor.x - xi)**2  + (vetor.y - yi)^2)
+            output += (x.constant*x.load)/distance
+        return output
+
