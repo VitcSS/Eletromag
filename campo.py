@@ -35,7 +35,6 @@ class CampoVetorial:
     def __new__(cls, constant=None):
         if CampoVetorial.__instance is None:
             CampoVetorial.__instance = object.__new__(cls)
-<<<<<<< HEAD
         return CampoVetorial.__instance
 
     def __init__(self, constant = None):
@@ -43,6 +42,3 @@ class CampoVetorial:
             self.constant = CampoVetorial.__constants[constant]
         else:
             self.constant = CampoVetorial.__constants['vacuo']
-=======
-        return CampoVetorial.__instance
->>>>>>> aea07459cb6dfca5c3a17e7218c793f305a98949
