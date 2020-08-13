@@ -44,7 +44,10 @@ class CampoVetorial:
             self.constant = CampoVetorial.__constants[constant]
         else:
             self.constant = CampoVetorial.__constants['vacuo']
+<<<<<<< HEAD
 
 
     def add_load(cls, camp):
         cls.__camps.add(camp)
+=======
+>>>>>>> 87810aad4f1418a9fdc458519fd8733a0989561d
