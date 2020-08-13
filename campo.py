@@ -4,11 +4,22 @@ class Campo(object):
         'ar': 8.995E9
     }
 
-    def __init__(self, load, position, constant=None):
+    def __init__(self, load, position):
 
         self.load = load
         self.position = position #  Tupla de valores (X, Y)
-        if constant is not None:
-            constant = Campo.__constants['vacuo']
-        else:
-            constant = Campo.__constants[constant]
+
+class CampoVetorial:
+    """
+        Objeto Singleton, armazenando os campos vetoriais especificos
+    """
+    __instance = None
+    __constants = {
+        'vacuo': 9E9,
+        'ar': 8.995E9
+    }
+
+    def __new__(cls):
+        if CampoVetorial.__instance is None:
+            CampoVetorial.__instance = object.__new__(cls)
+        return CampoVetorial.__instance
