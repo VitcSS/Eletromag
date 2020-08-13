@@ -1,9 +1,4 @@
 class Campo(object):
-    __constants = {
-        'vacuo': 9E9,
-        'ar': 8.995E9
-        'agua': 0.11E9
-    }
 
     def __init__(self, load, position):
 
@@ -17,7 +12,8 @@ class CampoVetorial:
     __instance = None
     __constants = {
         'vacuo': 9E9,
-        'ar': 8.995E9
+        'ar': 8.995E9,
+        'agua': 0.11E9
     }
 
     def __new__(cls):
