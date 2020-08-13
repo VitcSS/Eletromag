@@ -6,7 +6,7 @@ class Campo(object):
     def __init__(self, load, position, constant=None):
 
         self.load = load
-        self.position = self
+        self.position = position #  Tupla de valores (X, Y)
         if constant is not None:
             constant = Campo.__constants['vacuo']
         else:
