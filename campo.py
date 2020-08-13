@@ -1,6 +1,9 @@
 import math
 
 class Vetor(object):
+    """
+        Classe representando um vetor de força elétrica
+    """
     def __init__(self, position):
         self.x , self.y = position
         self.module = math.fabs(math.sqrt((self.x**2) + (self.y**2)))
@@ -20,6 +23,10 @@ class VetorPool:
 
 
 class Carga(object):
+    """
+        Classe responsável por armazenar um objeto contendo informações de uma carga pontual
+        Váriaveis armazenadas: Carga em coloumbs, posição em um campo cartesiano em metros do poto (0,0)
+    """
 
     def __init__(self, load, position):
 
@@ -29,6 +36,7 @@ class Carga(object):
 class CampoVetorial:
     """
         Objeto Singleton, armazenando os campos vetoriais especificos
+        Definição de constantes
     """
     __instance = None
     __constants = {
