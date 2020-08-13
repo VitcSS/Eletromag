@@ -18,7 +18,7 @@ class CampoVetorial:
     """
     __instance = None
     __constants = {
-        'vacuo': 9E9,
+        'vacuo': 9E9, 
         'ar': 8.995E9,
         'agua': 0.11E9,
         'borracha': 3E9,
