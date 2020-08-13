@@ -1,8 +1,10 @@
 import math
+
 class Vetor(object):
-    def __init_(self, position):
+    def __init__(self, position):
         self.x , self.y = position
-        self.module = math.fabs(sqrt((x^2) + (y^2)))
+        self.module = math.fabs(math.sqrt((self.x**2) + (self.y**2)))
+
 class Campo(object):
 
     def __init__(self, load, position):
