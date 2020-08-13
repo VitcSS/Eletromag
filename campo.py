@@ -67,6 +67,11 @@ class CampoVetorial:
     def get_all_loads(cls):
         return cls.__camps
 
+    @classmethod
+    def get_constant(cls):
+        campo = cls.__instance
+        return campo.constant
+
     @staticmethod
     def calculate_in_point(loads):
         # vetor = CampoVetorial.calculate_in_point(x)
