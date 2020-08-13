@@ -11,5 +11,14 @@ class TestCampCreation(unittest.TestCase):
         self.assertEqual(3, self.camp1.load)
         self.assertEqual(2, self.camp2.load)
 
+class TestFullCampCreation(unittest.TestCase):
+    def setUp(self):
+        self.camp = CampoVetorial()
+
+    def test_singleton(self):
+        camp2 = CampoVetorial()
+        self.assertIs(self.camp, camp2, 'Singleton funcionando')
+
+
 if __name__ == '__main__':
     unittest.main()
