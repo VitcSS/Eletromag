@@ -1,16 +1,23 @@
-import tkinter as tk
-from tkinter import *
+from campo import *
+from graphs import *
 
-window = tk.Tk()
-window.minsize(1200, 600)
+if __name__ == '__main__':
 
-canvas = tk.Canvas(window)
-canvas.pack()
+    campo = CampoVetorial()
 
-Label(window, text = 'Simulação Campos',
-      font =('Verdana', 30)).pack(side = BOTTOM)
+    print('Bem vindo ao simulador de campo vetorial!\n')
+    print('Você pode adicionar o número de cargas pontuais que desejar.\n')
+    print('Comece com a sua primeira carga:\n')
 
-canvas.create_line(10, 10, 200, 100, arrow=tk.LAST, fill='blue')
-canvas.create_line(50, 50, 100, 50, arrow=tk.LAST, fill='red')
+    while True:
 
-window.mainloop()
+        new_point_load = input('Digite a carga em coloumbs: ')
+        new_point_x = input('\nDigite a posição da carga no eixo X: ')
+        new_point_y = input('\nDigite a posição da carga no eixo Y ')
+
+        new_load = Carga(new_point_load, (new_point_x, new_point_y))
+        campo.add_load(new_load)
+
+        continue_program = input('\nDeseja adicionar outra carga? (y, n) ')
+        if continue_program == 'n':
+            break

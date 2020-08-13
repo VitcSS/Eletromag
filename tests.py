@@ -4,8 +4,8 @@ from campo import *
 
 class TestCampCreation(unittest.TestCase):
     def setUp(self):
-        self.camp1 = Campo(3, (1, 3))
-        self.camp2 = Campo(2, (5, 4))
+        self.camp1 = Carga(3, (1, 3))
+        self.camp2 = Carga(2, (5, 4))
 
     def test_constant_creation(self):
         self.assertEqual(3, self.camp1.load)

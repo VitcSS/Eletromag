@@ -4,7 +4,7 @@ class Vetor(object):
     def __init__(self, position):
         self.x , self.y = position
         self.module = math.fabs(math.sqrt((self.x**2) + (self.y**2)))
-class Campo(object):
+class Carga(object):
 
     def __init__(self, load, position):
 
@@ -32,10 +32,11 @@ class CampoVetorial:
 
     }
 
+    __camps = set()
+
     def __new__(cls, constant=None):
         if CampoVetorial.__instance is None:
             CampoVetorial.__instance = object.__new__(cls)
-<<<<<<< HEAD
         return CampoVetorial.__instance
 
     def __init__(self, constant = None):
@@ -43,6 +44,7 @@ class CampoVetorial:
             self.constant = CampoVetorial.__constants[constant]
         else:
             self.constant = CampoVetorial.__constants['vacuo']
-=======
-        return CampoVetorial.__instance
->>>>>>> aea07459cb6dfca5c3a17e7218c793f305a98949
+
+
+    def add_load(cls, camp):
+        cls.__camps.add(camp)
