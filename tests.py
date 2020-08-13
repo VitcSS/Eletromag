@@ -13,11 +13,15 @@ class TestCampCreation(unittest.TestCase):
 
 class TestFullCampCreation(unittest.TestCase):
     def setUp(self):
-        self.camp = CampoVetorial()
+        self.camp = CampoVetorial('ar')
 
     def test_singleton(self):
-        camp2 = CampoVetorial()
+        camp2 = CampoVetorial('etanol')
         self.assertIs(self.camp, camp2, 'Singleton funcionando')
+        print(self.camp.constant)
+
+    def test_constant(self):
+        self.assertAlmostEqual(self.camp.constant, 8.995E9)
 
 class TestVetor(unittest.TestCase):
     def setUp(self):

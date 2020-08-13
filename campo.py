@@ -18,7 +18,7 @@ class CampoVetorial:
     """
     __instance = None
     __constants = {
-        'vacuo': 9E9, 
+        'vacuo': 9E9,
         'ar': 8.995E9,
         'agua': 0.11E9,
         'borracha': 3E9,
@@ -33,7 +33,13 @@ class CampoVetorial:
 
     }
 
-    def __new__(cls):
+    def __new__(cls, constant=None):
         if CampoVetorial.__instance is None:
             CampoVetorial.__instance = object.__new__(cls)
         return CampoVetorial.__instance
+
+    def __init__(self, constant = None):
+        if constant is not None:
+            self.constant = CampoVetorial.__constants[constant]
+        else:
+            self.constant = CampoVetorial.__constants['vacuo']
