@@ -4,6 +4,21 @@ class Vetor(object):
     def __init__(self, position):
         self.x , self.y = position
         self.module = math.fabs(math.sqrt((self.x**2) + (self.y**2)))
+
+class VetorPool:
+    def __init__(self, vectors=set()):
+        """
+            Insanciação de um objeto que armazenará todos os vetores calculados
+            Podem ser passados como um set na criação , ex: vect_pool = VetorPool({vect1, vect2})
+            Pode ser passado instaciado e adicionado os vetores posteriormente, ex: vect_pool = VetorPool()
+            vect_pool.add_vector(vetor)
+        """
+        self.vectors = vectors
+
+    def add_vector(self, vector):
+        self.vectors.add(vector)
+
+
 class Carga(object):
 
     def __init__(self, load, position):

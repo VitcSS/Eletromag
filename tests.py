@@ -23,6 +23,13 @@ class TestFullCampCreation(unittest.TestCase):
     def test_constant(self):
         self.assertAlmostEqual(self.camp.constant, 8.995E9)
 
+    def test_load_add(self):
+        c1 = Carga(3, (1, 3))
+        c2 = Carga(2, (5, 4))
+        self.camp.add_load(c1)
+        self.camp.add_load(c2)
+        self.assertEqual(len(CampoVetorial.__camps), 2, 'Campos adicionados corretamente')
+
 class TestVetor(unittest.TestCase):
     def setUp(self):
         position = (-3, 4)
