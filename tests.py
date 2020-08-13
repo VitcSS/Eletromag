@@ -19,6 +19,15 @@ class TestFullCampCreation(unittest.TestCase):
         camp2 = CampoVetorial()
         self.assertIs(self.camp, camp2, 'Singleton funcionando')
 
+class TestVetor(unittest.TestCase):
+    def setUp(self):
+        position = (-3, 4)
+        self.vect = Vetor(position)
+
+    def test_module_and_position(self):
+        self.assertEqual(5, self.vect.module, 'Módulo calculado corretamente')
+        self.assertEqual(self.vect.x, -3)
+        self.assertEqual(self.vect.y, 4)
 
 if __name__ == '__main__':
     unittest.main()

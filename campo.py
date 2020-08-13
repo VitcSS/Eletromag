@@ -1,6 +1,7 @@
 import math
+
 class Vetor(object):
-    def __init_(self, position):
+    def __init__(self, position):
         self.x , self.y = position
         self.module = math.fabs(math.sqrt((self.x**2) + (self.y**2)))
 class Campo(object):
@@ -16,7 +17,7 @@ class CampoVetorial:
     """
     __instance = None
     __constants = {
-        'vacuo': 9E9,
+        'vacuo': 9E9, 
         'ar': 8.995E9,
         'agua': 0.11E9,
         'borracha': 3E9,
