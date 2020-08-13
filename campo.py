@@ -60,6 +60,9 @@ class CampoVetorial:
         else:
             self.constant = CampoVetorial.__constants['vacuo']
 
-
     def add_load(cls, camp):
         cls.__camps.add(camp)
+
+    @classmethod
+    def get_all_loads(cls):
+        return cls.__camps

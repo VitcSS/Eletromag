@@ -28,7 +28,7 @@ class TestFullCampCreation(unittest.TestCase):
         c2 = Carga(2, (5, 4))
         self.camp.add_load(c1)
         self.camp.add_load(c2)
-        self.assertEqual(len(CampoVetorial.__camps), 2, 'Campos adicionados corretamente')
+        self.assertEqual(len(CampoVetorial.get_all_loads()), 2, 'Campos adicionados corretamente')
 
 class TestVetor(unittest.TestCase):
     def setUp(self):
