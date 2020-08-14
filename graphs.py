@@ -1,8 +1,6 @@
 import tkinter as tk
 from tkinter import *
 
-
-
 if __name__ == '__main__':
     window = tk.Tk()
     window.minsize(1200, 600)
