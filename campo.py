@@ -4,8 +4,11 @@ class Vetor(object):
     """
         Classe representando um vetor de força elétrica
     """
-    def __init__(self, lenghts, module = None):
-        self.x , self.y = lenghts
+    def __init__(self, init_p, end_p, module = None):
+        self.xi , self.yi = init_p
+        self.xf , self.yf = end_p
+        self.x = self.xf - self.xi
+        self.y = self.yf - self.yi
         if module == None: 
             self.module = math.fabs(math.sqrt((self.x**2) + (self.y**2)))
         else:
