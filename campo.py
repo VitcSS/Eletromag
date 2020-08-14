@@ -11,8 +11,8 @@ class Vetor(object):
         Classe representando um vetor de força elétrica
     """
     def __init__(self, init_p, end_p, module = None):
-        self.xi , self.yi = init_p
-        self.xf , self.yf = end_p
+        self.xi , self.yi = init_p.x, init_p.y
+        self.xf , self.yf = end_p.x, end_p.y
         self.x = self.xf - self.xi
         self.y = self.yf - self.yi
         if module == None:
@@ -93,11 +93,11 @@ class CampoVetorial:
         return campo.constant
 
     @staticmethod
-    def calculate_in_point(vetor):
+    def calculate_in_point(point):
         # vetor = CampoVetorial.calculate_in_point(x)
         for input in CampoVetorial.get_all_loads():
             xi, yi = input.position
-            distance = math.sqrt((vetor.xi - xi)**2  + (vetor.yi - yi)**2)
+            distance = math.sqrt((point.x - xi)**2  + (point.y - yi)**2)
             CampoVet += (input.constant*input.load)/(distance)**2
             CampoX = CampoVet*(vetor.x-xi)/(distance)**2
             CampoY = CampoVet*(vetor.y-yi)/(distance)**2
