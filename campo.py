@@ -20,6 +20,9 @@ class Vetor(object):
         else:
             self.module = module
 
+    def __str__(self):
+        return f'x: ({self.xi}, {self.xf}), y: ({self.yi}, {self.yf})'
+
 class VetorPool:
     def __init__(self, vectors=set()):
         """
