@@ -9,7 +9,7 @@ class Vetor(object):
         self.xf , self.yf = end_p
         self.x = self.xf - self.xi
         self.y = self.yf - self.yi
-        if module == None: 
+        if module == None:
             self.module = math.fabs(math.sqrt((self.x**2) + (self.y**2)))
         else:
             self.module = module
@@ -93,8 +93,8 @@ class CampoVetorial:
         for input in CampoVetorial.get_all_loads():
             xi, yi = input.position
             distance = math.sqrt((vetor.x - xi)**2  + (vetor.y - yi)**2)
-            CampoVet += (input.constant*input.load)/distance
-        CampoX = CampoVet*(vetor.x-xi)/distance
-        CampoY = CampoVet*(vetor.y-yi)/distance
+            CampoVet += (input.constant*input.load)/(distance)**2
+        CampoX = CampoVet*(vetor.x-xi)/(distance)**2
+        CampoY = CampoVet*(vetor.y-yi)/(distance)**2
         output = Vetor((CampoX,CampoY), CampoVet)
         return output
