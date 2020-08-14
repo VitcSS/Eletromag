@@ -34,10 +34,9 @@ if __name__ == '__main__':
         campo.add_load(new_load)
 
         continue_program = input('\nDeseja adicionar outra carga? (y, n) ')
+
         if continue_program == 'n':
             break
-
-    # all_vectors = VetorPool()
 
     # TODO: Calcular os vetores
 
@@ -51,9 +50,18 @@ if __name__ == '__main__':
           font =('Verdana', 30)).pack(side = BOTTOM)
 
     vector_pool = VetorPool()
-    vector_pool.add_vector(Vetor((10,10), (30,40)))
-    vector_pool.add_vector(Vetor((60,10), (200,489)))
-    vector_pool.add_vector(Vetor((10,90), (10,40)))
+
+    p1 = Point(10, 10)
+    p2 = Point(400, 400)
+
+    points = [p1, p2]
+
+    for point in points:
+        new_vector = CampoVetorial.calculate_in_point(point)
+        vector_pool.add_vector(new_vector)
+    # vector_pool.add_vector(Vetor((10,10), (30,40)))
+    # vector_pool.add_vector(Vetor((60,10), (200,489)))
+    # vector_pool.add_vector(Vetor((10,90), (10,40)))
 
 
     ExhibitVector.exhibit_all(vector_pool, canvas)
