@@ -4,9 +4,12 @@ class Vetor(object):
     """
         Classe representando um vetor de força elétrica
     """
-    def __init__(self, position):
-        self.x , self.y = position
-        self.module = math.fabs(math.sqrt((self.x**2) + (self.y**2)))
+    def __init__(self, lenghts, module = None):
+        self.x , self.y = lenghts
+        if module == None: 
+            self.module = math.fabs(math.sqrt((self.x**2) + (self.y**2)))
+        else:
+            self.module = module
 
 class VetorPool:
     def __init__(self, vectors=set()):
@@ -82,9 +85,13 @@ class CampoVetorial:
 
     @staticmethod
     def calculate_in_point(vetor):
+
         # vetor = CampoVetorial.calculate_in_point(x)
-        for x in CampoVetorial.get_all_loads():
-            xi, yi = position
+        for input in CampoVetorial.get_all_loads():
+            xi, yi = input.position
             distance = math.sqrt((vetor.x - xi)**2  + (vetor.y - yi)**2)
-            output += (x.constant*x.load)/distance
+            CampoVet += (input.constant*input.load)/distance
+        CampoX = CampoVet*(vetor.x-xi)/distance
+        CampoY = CampoVet*(vetor.y-yi)/distance
+        output = Vetor((CampoX,CampoY), CampoVet)
         return output
