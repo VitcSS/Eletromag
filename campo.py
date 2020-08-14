@@ -94,12 +94,15 @@ class CampoVetorial:
 
     @staticmethod
     def calculate_in_point(point):
+        CampoVet = 0
+        CampoX = 0
+        CampoY = 0
         # vetor = CampoVetorial.calculate_in_point(x)
         for input in CampoVetorial.get_all_loads():
             xi, yi = input.position
             distance = math.sqrt((point.x - xi)**2  + (point.y - yi)**2)
             CampoVet += (input.constant*input.load)/(distance)**2
-            CampoX = CampoVet*(point.x-xi)/(distance)**2
-            CampoY = CampoVet*(point.y-yi)/(distance)**2
+            CampoX += CampoVet*(point.x-xi)/(distance)**2
+            CampoY += CampoVet*(point.y-yi)/(distance)**2
         output = Vetor((point.xi, point.yi),(CampoX,CampoY), CampoVet)
         return output
