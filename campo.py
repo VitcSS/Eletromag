@@ -104,5 +104,5 @@ class CampoVetorial:
             CampoVet += (CampoVetorial.get_constant()*input.load)/(distance)**2
             CampoX += CampoVet*(point.x-xi)/(distance)**2
             CampoY += CampoVet*(point.y-yi)/(distance)**2
-        output = Vetor((point.xi, point.yi),(CampoX,CampoY), CampoVet)
+        output = Vetor((point.x, point.y),(CampoX,CampoY), CampoVet)
         return output
