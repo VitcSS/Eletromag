@@ -26,9 +26,9 @@ if __name__ == '__main__':
           font =('Verdana', 30)).pack(side = BOTTOM)
 
     vector_pool = VetorPool()
-    vector_pool.add_vector(Vetor((10,10), (30,40)))
-    vector_pool.add_vector(Vetor((60,10), (200,489)))
-    vector_pool.add_vector(Vetor((10,90), (10,40)))
+    vector_pool.add_vector(Vetor(Point(10,10), Point(30,40)))
+    vector_pool.add_vector(Vetor(Point(60,10), Point(200,489)))
+    vector_pool.add_vector(Vetor(Point(10,90), Point(10,40)))
 
 
     ExhibitVector.exhibit_all(vector_pool, canvas)
