@@ -99,7 +99,7 @@ class CampoVetorial:
             xi, yi = input.position
             distance = math.sqrt((point.x - xi)**2  + (point.y - yi)**2)
             CampoVet += (input.constant*input.load)/(distance)**2
-            CampoX = CampoVet*(vetor.x-xi)/(distance)**2
-            CampoY = CampoVet*(vetor.y-yi)/(distance)**2
-        output = Vetor((vetor.xi, vetor.yi),(CampoX,CampoY), CampoVet)
+            CampoX = CampoVet*(point.x-xi)/(distance)**2
+            CampoY = CampoVet*(point.y-yi)/(distance)**2
+        output = Vetor((point.xi, point.yi),(CampoX,CampoY), CampoVet)
         return output
