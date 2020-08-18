@@ -64,6 +64,7 @@ if __name__ == '__main__':
     # vector_pool.add_vector(Vetor((10,90), (10,40)))
 
     for vector in vector_pool.vectors:
+        
         print(vector)
 
 
