@@ -44,7 +44,6 @@ if __name__ == '__main__':
     window.minsize(1200, 600)
 
     canvas = tk.Canvas(window)
-    canvas.pack()
 
     Label(window, text = 'Simulação Campos',
           font =('Verdana', 30)).pack(side = BOTTOM)
@@ -71,6 +70,7 @@ if __name__ == '__main__':
     ExhibitVector.exhibit_all(vector_pool, canvas)
 
 
+    canvas.pack()
     window.mainloop()
 
-    ExhibitVector
+    # ExhibitVector
