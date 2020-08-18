@@ -52,7 +52,7 @@ if __name__ == '__main__':
 
     window = tk.Tk()
 
-    canvas = tk.Canvas(window, width=600, height=600)
+    canvas = tk.Canvas(window, width=800, height=800)
 
     Label(window, text = 'Simulação Campos',
           font =('Verdana', 30)).pack(side = BOTTOM)
@@ -60,7 +60,7 @@ if __name__ == '__main__':
     Label(window, text = 'Positivo: Azul, Negativo: Vermelho',
           font =('Verdana', 15)).pack(side = BOTTOM)
 
-    for carga in CampoVetorial.get_all_loads(): 
+    for carga in CampoVetorial.get_all_loads():
         DrawCarga.drawPoint(carga, canvas)
 
     vector_pool = VetorPool()
@@ -71,20 +71,55 @@ if __name__ == '__main__':
     p2 = Point(100, 200)
     p3 = Point(100, 300)
     p4 = Point(100, 400)
-    p5 = Point(200, 100)
-    p6 = Point(200, 200)
-    p7 = Point(200, 300)
-    p8 = Point(200, 400)
-    p9 = Point(300, 100)
-    p10 = Point(300, 200)
-    p11 = Point(300, 300)
-    p12 = Point(300, 400)
-    p13 = Point(400, 100)
-    p14 = Point(400, 200)
-    p15 = Point(400, 300)
-    p16 = Point(400, 400)
+    p5 = Point(100, 500)
+    p6 = Point(100, 600)
+    p7 = Point(100, 700)
+    p8 = Point(200, 100)
+    p9 = Point(200, 200)
+    p10 = Point(200, 300)
+    p11 = Point(200, 400)
+    p12 = Point(200, 500)
+    p13 = Point(200, 600)
+    p14 = Point(200, 700)
+    p15 = Point(300, 100)
+    p16 = Point(300, 200)
+    p17 = Point(300, 300)
+    p18 = Point(300, 400)
+    p19 = Point(300, 500)
+    p20 = Point(300, 600)
+    p21 = Point(300, 700)
+    p22 = Point(400, 100)
+    p23 = Point(400, 200)
+    p24 = Point(400, 300)
+    p25 = Point(400, 400)
+    p26 = Point(400, 500)
+    p27 = Point(400, 600)
+    p28 = Point(400, 700)
+    p29 = Point(500, 100)
+    p30 = Point(500, 200)
+    p31 = Point(500, 300)
+    p32 = Point(500, 400)
+    p33 = Point(500, 500)
+    p34 = Point(500, 600)
+    p35 = Point(500, 700)
+    p36 = Point(600, 100)
+    p37 = Point(600, 200)
+    p38 = Point(600, 300)
+    p39 = Point(600, 400)
+    p40 = Point(600, 500)
+    p41 = Point(600, 600)
+    p42 = Point(600, 700)
+    p43 = Point(700, 100)
+    p44 = Point(700, 200)
+    p45 = Point(700, 300)
+    p46 = Point(700, 400)
+    p47 = Point(700, 500)
+    p48 = Point(700, 600)
+    p49 = Point(700, 700)
 
-    points = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16]
+
+
+    points = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30, p31, p32, p33, p34, p35, p36, p37, p38, p39, p40, p41, p42, p43, p44, p45, p46, p47, p48, p49]
 
     for point in points:
         new_vector = CampoVetorial.calculate_in_point(point)
