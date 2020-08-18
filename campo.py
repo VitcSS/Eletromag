@@ -64,7 +64,7 @@ class CampoVetorial:
         'vidro': 1.5E9,
         'marmore': 1.125E9,
         'etanol': 0.36E9,
-        'metanol:': 0.265E9,
+        'metanol': 0.265E9,
         'glicerina': 0.18E9,
 
 
@@ -100,12 +100,13 @@ class CampoVetorial:
         CampoVet = 0
         CampoX = 0
         CampoY = 0
-        # vetor = CampoVetorial.calculate_in_point(x)
         for input in CampoVetorial.get_all_loads():
             xi, yi = input.position
             distance = math.sqrt((point.x - xi)**2  + (point.y - yi)**2)
+
             if distance == 0:
                 distance = 0.0001 # Valor suficientemente grande para passar do tamanho total
+
             CampoVet += (CampoVetorial.get_constant()*input.load)/(distance)**2
             CampoX += CampoVet*(point.x-xi)/(distance)**2
             CampoY += CampoVet*(point.y-yi)/(distance)**2

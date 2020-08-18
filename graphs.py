@@ -88,7 +88,11 @@ class DrawCarga:
 
     @staticmethod
     def drawPoint(carga, canvas):
-        canvas.create_oval(carga.position[0]-5, carga.position[1]-5, carga.position[0]+5, carga.position[1]+5, fill='green')
+        if carga.load < 0:
+            color = 'red'
+        else:
+            color='blue'
+        canvas.create_oval(carga.position[0]-5, carga.position[1]-5, carga.position[0]+5, carga.position[1]+5, fill=color)
 
 if __name__ == '__main__':
     window = tk.Tk()
