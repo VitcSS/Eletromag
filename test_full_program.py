@@ -1,6 +1,7 @@
 from campo import *
 from graphs import *
 import sys
+
 # Definição campo
 campo = CampoVetorial('agua')
 print(f'Constante: {CampoVetorial.get_constant()}\n')
@@ -56,6 +57,7 @@ for vector in vector_pool.vectors:
 # Tkinter
 
 window = tk.Tk()
+window.maxsize(800, 800)
 canvas = tk.Canvas(window, width=500, height=500)
 
 # Desenho cargas
