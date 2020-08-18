@@ -60,7 +60,7 @@ if __name__ == '__main__':
     Label(window, text = 'Positivo: Azul, Negativo: Vermelho',
           font =('Verdana', 15)).pack(side = BOTTOM)
 
-    for carga in CampoVetorial.get_all_loads():
+    for carga in CampoVetorial.get_all_loads(): 
         DrawCarga.drawPoint(carga, canvas)
 
     vector_pool = VetorPool()
