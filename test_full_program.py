@@ -10,10 +10,10 @@ print(f'Constante: {CampoVetorial.get_constant()}\n')
 # new_load = Carga(new_point_load, (new_point_x, new_point_y))
 # campo.add_load(new_load)
 
-new_load = Carga(0.2, (10, 20))
+new_load = Carga(0.2, (0, 50))
 campo.add_load(new_load)
 
-new_load = Carga(0.5, (500, 400))
+# new_load = Carga(0.5, (350, 350))
 campo.add_load(new_load)
 
 print('Cargas no campo:\n')
@@ -56,19 +56,19 @@ for vector in vector_pool.vectors:
 # Tkinter
 
 window = tk.Tk()
-window.minsize(500, 500)
 canvas = tk.Canvas(window)
 
-Label(window, text = 'Simulação Campos',
-      font =('Verdana', 30)).pack(side = BOTTOM)
+# Desenho cargas
+for carga in CampoVetorial.get_all_loads():
+    DrawCarga.drawPoint(carga, canvas)
 
 canvas.pack()
 
 try:
     if sys.argv[1] == 'single':
-        canvas.create_line(10, 10, 200, 100, arrow=tk.LAST, fill='blue')
-        canvas.create_line(50, 100, 600, 300, arrow=tk.LAST, fill='blue')
-        canvas.create_line(20, 15, 270, 300, arrow=tk.LAST, fill='blue')
+        canvas.create_line(10, 10, 150, 150, arrow=tk.LAST, fill='blue')
+        # canvas.create_line(50, 100, 600, 300, arrow=tk.LAST, fill='blue')
+        # canvas.create_line(20, 15, 270, 300, arrow=tk.LAST, fill='blue')
 except IndexError:
     ExhibitVector.exhibit_all(vector_pool, canvas)
 

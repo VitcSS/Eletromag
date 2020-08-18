@@ -15,6 +15,14 @@ class ExhibitVector:
         for vector in vectorPool.vectors:
             ExhibitVector.exhibit(vector, canvas)
 
+class DrawCarga:
+    def __init__(self):
+        raise NotImplementedError
+
+    @staticmethod
+    def drawPoint(carga, canvas):
+        canvas.create_oval(carga.position[0]-5, carga.position[1]-5, carga.position[0]+5, carga.position[1]+5, fill='green')
+
 if __name__ == '__main__':
     window = tk.Tk()
     window.minsize(1200, 600)
