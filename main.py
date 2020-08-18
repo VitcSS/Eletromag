@@ -89,7 +89,7 @@ if __name__ == '__main__':
 
     print('Vetores no espaço:\n')
     print('Cada vetor é expresso da forma (xi, xf), (yi, yf) em que xi e xf são valores arbitrários\n')
-    print('Cada representação ')
+    print('Cada representação de campo utiliza uma unidade de texto para cada 1N/C\n')
     for vector in vector_pool.vectors:
         print(f'Vetor: {vector}')
 
