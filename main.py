@@ -28,7 +28,7 @@ if __name__ == '__main__':
     print(f'Valor da constante: {CampoVetorial.get_constant()}\n')
 
     print('Você pode adicionar o número de cargas pontuais que desejar.\n')
-    print('Lembre-se, o desenho representa apenas as setas de campos em que 0 < X < 500 e 0 < Y < 500, sendo as unidades em metros.\n')
+    print('Lembre-se, o desenho representa apenas as setas de campos em que 0 < X < 800 e 0 < Y < 800, sendo as unidades em metros.\n')
     print('Comece com a sua primeira carga:\n')
 
     while True:
