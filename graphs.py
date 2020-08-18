@@ -75,7 +75,7 @@ class ExhibitVector:
 
     @staticmethod
     def exhibit(vector, canvas):
-        canvas.create_line(vector.xi, (vector.xi + vector.xf), vector.yi, (vector.yi + vector.yf), arrow=tk.LAST, fill=f'{COLORS[random.randint(0, len(COLORS)-1)]}')
+        canvas.create_line(vector.xi, vector.yi, (vector.xi + vector.xf), (vector.yi + vector.yf), arrow=tk.LAST, fill=f'black', width=4)
 
     @staticmethod
     def exhibit_all(vectorPool, canvas):

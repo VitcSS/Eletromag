@@ -69,9 +69,9 @@ canvas.pack()
 
 try:
     if sys.argv[1] == 'single':
-        canvas.create_line(10, 10, 150, 150, arrow=tk.LAST, fill='blue')
-        canvas.create_line(50, 100, 600, 300, arrow=tk.LAST, fill='blue')
-        canvas.create_line(20, 15, 270, 300, arrow=tk.LAST, fill='blue')
+        canvas.create_line(10, 10, 150, 150, arrow=tk.LAST, fill='blue', width=2)
+        canvas.create_line(50, 100, 600, 300, arrow=tk.LAST, fill='red', width=4)
+        canvas.create_line(20, 15, 270, 300, arrow=tk.LAST, fill='green', width=8)
 except IndexError:
     ExhibitVector.exhibit_all(vector_pool, canvas)
 
