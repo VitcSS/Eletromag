@@ -13,7 +13,7 @@ print(f'Constante: {CampoVetorial.get_constant()}\n')
 new_load = Carga(0.2, (0, 50))
 campo.add_load(new_load)
 
-# new_load = Carga(0.5, (350, 350))
+new_load = Carga(0.5, (350, 350))
 campo.add_load(new_load)
 
 print('Cargas no campo:\n')
@@ -56,7 +56,7 @@ for vector in vector_pool.vectors:
 # Tkinter
 
 window = tk.Tk()
-canvas = tk.Canvas(window)
+canvas = tk.Canvas(window, width=500, height=500)
 
 # Desenho cargas
 for carga in CampoVetorial.get_all_loads():
