@@ -62,15 +62,15 @@ canvas = tk.Canvas(window)
 Label(window, text = 'Simulação Campos',
       font =('Verdana', 30)).pack(side = BOTTOM)
 
-ExhibitVector.exhibit_all(vector_pool, canvas)
-
 canvas.pack()
 
 try:
     if sys.argv[1] == 'single':
-        pass
+        canvas.create_line(10, 10, 200, 100, arrow=tk.LAST, fill='blue')
+        canvas.create_line(50, 100, 600, 300, arrow=tk.LAST, fill='blue')
+        canvas.create_line(20, 15, 270, 300, arrow=tk.LAST, fill='blue')
 except IndexError:
-    pass
+    ExhibitVector.exhibit_all(vector_pool, canvas)
 
 # canvas.create_line(vector.xi, vector.xf, vector.yi, vector.yf, arrow=tk.LAST, fill='blue')
 window.mainloop()

@@ -8,7 +8,7 @@ class ExhibitVector:
 
     @staticmethod
     def exhibit(vector, canvas):
-        canvas.create_line(vector.xi, vector.xf, vector.yi, vector.yf, arrow=tk.LAST, fill='blue')
+        canvas.create_line(vector.xi, (vector.xi + vector.xf), vector.yi, (vector.yi + vector.yf), arrow=tk.LAST, fill='blue')
 
     @staticmethod
     def exhibit_all(vectorPool, canvas):
