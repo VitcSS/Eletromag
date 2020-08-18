@@ -57,6 +57,9 @@ if __name__ == '__main__':
     Label(window, text = 'Simulação Campos',
           font =('Verdana', 30)).pack(side = BOTTOM)
 
+    Label(window, text = 'Positivo: Azul, Negativo: Vermelho',
+          font =('Verdana', 15)).pack(side = BOTTOM)
+
     for carga in CampoVetorial.get_all_loads():
         DrawCarga.drawPoint(carga, canvas)
 
