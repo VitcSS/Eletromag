@@ -26,9 +26,9 @@ if __name__ == '__main__':
 
     while True:
 
-        new_point_load = int(input('Digite a carga em coloumbs: '))
-        new_point_x = int(input('\nDigite a posição da carga no eixo X em metros: '))
-        new_point_y = int(input('\nDigite a posição da carga no eixo Y em metros: '))
+        new_point_load = float(input('Digite a carga em coloumbs: '))
+        new_point_x = float(input('\nDigite a posição da carga no eixo X em metros: '))
+        new_point_y = float(input('\nDigite a posição da carga no eixo Y em metros: '))
 
         new_load = Carga(new_point_load, (new_point_x, new_point_y))
         campo.add_load(new_load)
