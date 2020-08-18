@@ -62,6 +62,8 @@ canvas = tk.Canvas(window)
 Label(window, text = 'Simulação Campos',
       font =('Verdana', 30)).pack(side = BOTTOM)
 
+ExhibitVector.exhibit_all(vector_pool, canvas)
+
 canvas.pack()
 
 try:
