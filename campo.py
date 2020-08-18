@@ -103,7 +103,7 @@ class CampoVetorial:
         for input in CampoVetorial.get_all_loads():
             xi, yi = input.position
             distance = math.sqrt((point.x - xi)**2  + (point.y - yi)**2)
- 
+
             if distance == 0:
                 distance = 0.0001 # Valor suficientemente grande para passar do tamanho total
 
@@ -111,4 +111,5 @@ class CampoVetorial:
             CampoX += CampoVet*(point.x-xi)/(distance)**2
             CampoY += CampoVet*(point.y-yi)/(distance)**2
         output = Vetor(Point(point.x, point.y),Point(CampoX, CampoY), CampoVet)
+        print(CampoVet)
         return output
