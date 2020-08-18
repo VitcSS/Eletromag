@@ -51,7 +51,6 @@ if __name__ == '__main__':
         print(f'Carga: {carga.load}, {carga.position}\n')
 
     window = tk.Tk()
-    window.minsize(1200, 600)
 
     canvas = tk.Canvas(window, width=600, height=600)
 
@@ -89,6 +88,8 @@ if __name__ == '__main__':
         vector_pool.add_vector(new_vector)
 
     print('Vetores no espaço:\n')
+    print('Cada vetor é expresso da forma (xi, xf), (yi, yf) em que xi e xf são valores arbitrários\n')
+    print('Cada representação ')
     for vector in vector_pool.vectors:
         print(f'Vetor: {vector}')
 
