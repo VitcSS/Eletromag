@@ -58,6 +58,10 @@ for vector in vector_pool.vectors:
 window = tk.Tk()
 window.minsize(500, 500)
 canvas = tk.Canvas(window)
+
+Label(window, text = 'Simulação Campos',
+      font =('Verdana', 30)).pack(side = BOTTOM)
+
 canvas.pack()
 
 try:
