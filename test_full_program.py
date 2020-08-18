@@ -64,13 +64,13 @@ for carga in CampoVetorial.get_all_loads():
 
 canvas.pack()
 
-try:
-    if sys.argv[1] == 'single':
-        canvas.create_line(10, 10, 150, 150, arrow=tk.LAST, fill='blue')
-        # canvas.create_line(50, 100, 600, 300, arrow=tk.LAST, fill='blue')
-        # canvas.create_line(20, 15, 270, 300, arrow=tk.LAST, fill='blue')
-except IndexError:
-    ExhibitVector.exhibit_all(vector_pool, canvas)
+# try:
+#     if sys.argv[1] == 'single':
+#         canvas.create_line(10, 10, 150, 150, arrow=tk.LAST, fill='blue')
+#         # canvas.create_line(50, 100, 600, 300, arrow=tk.LAST, fill='blue')
+#         # canvas.create_line(20, 15, 270, 300, arrow=tk.LAST, fill='blue')
+# except IndexError:
+#     ExhibitVector.exhibit_all(vector_pool, canvas)
 
 # canvas.create_line(vector.xi, vector.xf, vector.yi, vector.yf, arrow=tk.LAST, fill='blue')
 window.mainloop()
