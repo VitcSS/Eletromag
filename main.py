@@ -44,10 +44,13 @@ if __name__ == '__main__':
     window = tk.Tk()
     window.minsize(1200, 600)
 
-    canvas = tk.Canvas(window)
+    canvas = tk.Canvas(window, width=500, height=500)
 
     Label(window, text = 'Simulação Campos',
           font =('Verdana', 30)).pack(side = BOTTOM)
+
+    for carga in CampoVetorial.get_all_loads():
+        DrawCarga.drawPoint(carga, canvas)
 
     vector_pool = VetorPool()
 
@@ -62,10 +65,6 @@ if __name__ == '__main__':
     # vector_pool.add_vector(Vetor((10,10), (30,40)))
     # vector_pool.add_vector(Vetor((60,10), (200,489)))
     # vector_pool.add_vector(Vetor((10,90), (10,40)))
-
-    for vector in vector_pool.vectors:
-
-        print(vector)
 
 
     ExhibitVector.exhibit_all(vector_pool, canvas)

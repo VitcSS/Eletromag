@@ -13,7 +13,7 @@ print(f'Constante: {CampoVetorial.get_constant()}\n')
 new_load = Carga(0.2, (0, 50))
 campo.add_load(new_load)
 
-# new_load = Carga(0.5, (350, 350))
+new_load = Carga(0.5, (350, 350))
 campo.add_load(new_load)
 
 print('Cargas no campo:\n')
@@ -56,7 +56,7 @@ for vector in vector_pool.vectors:
 # Tkinter
 
 window = tk.Tk()
-canvas = tk.Canvas(window)
+canvas = tk.Canvas(window, width=500, height=500)
 
 # Desenho cargas
 for carga in CampoVetorial.get_all_loads():
@@ -64,13 +64,6 @@ for carga in CampoVetorial.get_all_loads():
 
 canvas.pack()
 
-# try:
-#     if sys.argv[1] == 'single':
-#         canvas.create_line(10, 10, 150, 150, arrow=tk.LAST, fill='blue')
-#         # canvas.create_line(50, 100, 600, 300, arrow=tk.LAST, fill='blue')
-#         # canvas.create_line(20, 15, 270, 300, arrow=tk.LAST, fill='blue')
-# except IndexError:
-#     ExhibitVector.exhibit_all(vector_pool, canvas)
 
 # canvas.create_line(vector.xi, vector.xf, vector.yi, vector.yf, arrow=tk.LAST, fill='blue')
 window.mainloop()
