@@ -2,6 +2,7 @@ from campo import *
 from graphs import *
 import sys
 
+
 # Definição campo
 campo = CampoVetorial('agua')
 print(f'Constante: {CampoVetorial.get_constant()}\n')
@@ -24,22 +25,22 @@ for carga in CampoVetorial.get_all_loads():
 
 # 4y espaços vezes 4x espaços vetores -> y: 100, 200, 300, 400
 # Pontos utilizados no espaço
-p1 = Point(100, 100)
-p2 = Point(100, 200)
-p3 = Point(100, 300)
-p4 = Point(100, 400)
-p5 = Point(200, 100)
-p6 = Point(200, 200)
-p7 = Point(200, 300)
-p8 = Point(200, 400)
-p9 = Point(300, 100)
-p10 = Point(300, 200)
-p11 = Point(300, 300)
-p12 = Point(300, 400)
-p13 = Point(400, 100)
-p14 = Point(400, 200)
-p15 = Point(400, 300)
-p16 = Point(400, 400)
+p1 = Point(100, 50)
+p2 = Point(125, 75)
+p3 = Point(150, 100)
+p4 = Point(175, 125)
+p5 = Point(200, 150)
+p6 = Point(225, 175)
+p7 = Point(250, 200)
+p8 = Point(275, 225)
+p9 = Point(300, 250)
+p10 = Point(325, 275)
+p11 = Point(350, 300)
+p12 = Point(375, 325)
+p13 = Point(400, 350)
+p14 = Point(425, 375)
+p15 = Point(450, 400)
+p16 = Point(475, 0)
 
 points = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16]
 
