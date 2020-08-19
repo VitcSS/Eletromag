@@ -9,6 +9,6 @@ Método de execução do arquivo:
 
 Baixar a pasta com os arquivos pelo github
 
-Linux: Executar o arquivo main_unix como executável pelo terminal
+Linux: Executar o arquivo main_unix como executável pelo terminal. Exemplo: No diretório em que o arquivo se situa, digite ./main_unix
 
-Windows: Executar o arquivo main.exe como executável pelo terminal ou "duplo clique"
+Windows: Executar o arquivo main.exe como executável pelo terminal ou "duplo clique" no arquivo.
